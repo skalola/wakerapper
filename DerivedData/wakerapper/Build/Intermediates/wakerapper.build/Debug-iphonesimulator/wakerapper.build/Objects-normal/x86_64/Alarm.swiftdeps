@@ -1,0 +1,436 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Alarm"
+provides-nominal:
+- "C38wakerapper_temp_caseinsensitive_rename5Alarm"
+- "OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation"
+provides-member:
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", ""]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "NSArray"
+- !private "NSDateFormatter"
+- "MKMapItem"
+- "Routine"
+- "NSDictionary"
+- !private "NSDateFormatterStyle"
+- "Int"
+- "Alarm"
+- !private "NSUUID"
+- !private "NSCalendar"
+- !private "FloatLiteralType"
+- !private "BooleanLiteralType"
+- "Destination"
+- !private "NSCalendarOptions"
+- "String"
+- "Bool"
+- !private "*"
+- "NSDate"
+- !private "~="
+- "=="
+- !private "+"
+- !private "IntegerLiteralType"
+- "StringLiteralType"
+- !private "NSCalendarUnit"
+- !private "Dictionary"
+- !private "NSDateComponents"
+depends-member:
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "Alarm"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "Bool"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "Destination"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "Int"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "MKMapItem"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSArray"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSCalendar"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSCalendarOptions"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSCalendarUnit"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSDate"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSDateComponents"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSDateFormatter"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSDateFormatterStyle"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSDictionary"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "NSUUID"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "Routine"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "String"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "Transportation"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "UUID"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "arrival"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "calculateWakeup"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "copy"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "deinit"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "destination"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "etaMinutes"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "followupID"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "fromDictionary"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "getTransportString"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "getWakeupString"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "init"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "isActive"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "routine"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setArrival"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setDestination"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setETA"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setFollowupID"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setRoutine"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setTransportation"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setUUID"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "setWakeup"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "toDictionary"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "transportation"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "turnOff"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "turnOn"]
+- ["C38wakerapper_temp_caseinsensitive_rename5Alarm", "wakeup"]
+- !private ["Ps9AnyObject", "Alarm"]
+- !private ["Ps9AnyObject", "Destination"]
+- !private ["Ps9AnyObject", "Key"]
+- !private ["Ps9AnyObject", "NSCalendar"]
+- !private ["Ps9AnyObject", "NSCalendarOptions"]
+- !private ["Ps9AnyObject", "NSCalendarUnit"]
+- !private ["Ps9AnyObject", "NSDate"]
+- !private ["Ps9AnyObject", "NSDateComponents"]
+- !private ["Ps9AnyObject", "NSDateFormatter"]
+- !private ["Ps9AnyObject", "NSDateFormatterStyle"]
+- !private ["Ps9AnyObject", "NSUUID"]
+- !private ["Ps9AnyObject", "Routine"]
+- !private ["Ps9AnyObject", "Transportation"]
+- !private ["Ps9AnyObject", "UUID"]
+- !private ["Ps9AnyObject", "UUIDString"]
+- !private ["Ps9AnyObject", "Value"]
+- !private ["Ps9AnyObject", "arrival"]
+- !private ["Ps9AnyObject", "calculateWakeup"]
+- !private ["Ps9AnyObject", "copy"]
+- !private ["Ps9AnyObject", "currentCalendar"]
+- !private ["Ps9AnyObject", "dateByAddingComponents"]
+- !private ["Ps9AnyObject", "destination"]
+- !private ["Ps9AnyObject", "etaMinutes"]
+- !private ["Ps9AnyObject", "followupID"]
+- !private ["Ps9AnyObject", "fromArray"]
+- !private ["Ps9AnyObject", "fromDictionary"]
+- !private ["Ps9AnyObject", "getTotalTime"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isActive"]
+- !private ["Ps9AnyObject", "routine"]
+- !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "stringFromDate"]
+- !private ["Ps9AnyObject", "timeStyle"]
+- !private ["Ps9AnyObject", "toArray"]
+- !private ["Ps9AnyObject", "toDictionary"]
+- !private ["Ps9AnyObject", "transportation"]
+- !private ["Ps9AnyObject", "valueForKey"]
+- !private ["Ps9AnyObject", "wakeup"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "Minute"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Key"]
+- !private ["Ps11CVarArgType", "UUIDString"]
+- !private ["Ps11CVarArgType", "Value"]
+- !private ["Ps11CVarArgType", "currentCalendar"]
+- !private ["Ps11CVarArgType", "dateByAddingComponents"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "setValue"]
+- !private ["Ps11CVarArgType", "stringFromDate"]
+- !private ["Ps11CVarArgType", "timeStyle"]
+- !private ["Ps11CVarArgType", "valueForKey"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "UUIDString"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "currentCalendar"]
+- !private ["Ps28CustomDebugStringConvertible", "dateByAddingComponents"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps28CustomDebugStringConvertible", "stringFromDate"]
+- !private ["Ps28CustomDebugStringConvertible", "timeStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "UUIDString"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "currentCalendar"]
+- !private ["Ps23CustomStringConvertible", "dateByAddingComponents"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "stringFromDate"]
+- !private ["Ps23CustomStringConvertible", "timeStyle"]
+- !private ["Ps23CustomStringConvertible", "valueForKey"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename11Destination", "copy"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename11Destination", "fromDictionary"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename11Destination", "init"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename11Destination", "toDictionary"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "valueForKey"]
+- !private ["Ps9Equatable", "Automobile"]
+- !private ["Ps9Equatable", "Key"]
+- !private ["Ps9Equatable", "Minute"]
+- ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "ShortStyle"]
+- !private ["Ps9Equatable", "UUIDString"]
+- !private ["Ps9Equatable", "Value"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "currentCalendar"]
+- !private ["Ps9Equatable", "dateByAddingComponents"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "setValue"]
+- !private ["Ps9Equatable", "stringFromDate"]
+- !private ["Ps9Equatable", "timeStyle"]
+- !private ["Ps9Equatable", "valueForKey"]
+- ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- !private ["Ps8Hashable", "Automobile"]
+- !private ["Ps8Hashable", "Key"]
+- ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "ShortStyle"]
+- !private ["Ps8Hashable", "UUIDString"]
+- !private ["Ps8Hashable", "Value"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "currentCalendar"]
+- !private ["Ps8Hashable", "dateByAddingComponents"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "setValue"]
+- !private ["Ps8Hashable", "stringFromDate"]
+- !private ["Ps8Hashable", "timeStyle"]
+- !private ["Ps8Hashable", "valueForKey"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "deinit"]
+- !private ["Si", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["CSo10NSCalendar", "currentCalendar"]
+- !private ["CSo10NSCalendar", "dateByAddingComponents"]
+- !private ["VSC17NSCalendarOptions", "init"]
+- !private ["VSC14NSCalendarUnit", "Minute"]
+- !private ["PSo8NSCoding", "Key"]
+- !private ["PSo8NSCoding", "UUIDString"]
+- !private ["PSo8NSCoding", "Value"]
+- !private ["PSo8NSCoding", "currentCalendar"]
+- !private ["PSo8NSCoding", "dateByAddingComponents"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "setValue"]
+- !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo8NSCoding", "timeStyle"]
+- !private ["PSo8NSCoding", "valueForKey"]
+- !private ["PSo9NSCopying", "Key"]
+- !private ["PSo9NSCopying", "UUIDString"]
+- !private ["PSo9NSCopying", "Value"]
+- !private ["PSo9NSCopying", "currentCalendar"]
+- !private ["PSo9NSCopying", "dateByAddingComponents"]
+- !private ["PSo9NSCopying", "deinit"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "setValue"]
+- !private ["PSo9NSCopying", "stringFromDate"]
+- !private ["PSo9NSCopying", "timeStyle"]
+- !private ["PSo9NSCopying", "valueForKey"]
+- !private ["CSo6NSDate", "init"]
+- !private ["CSo16NSDateComponents", "init"]
+- !private ["CSo16NSDateComponents", "setValue"]
+- !private ["CSo15NSDateFormatter", "init"]
+- !private ["CSo15NSDateFormatter", "stringFromDate"]
+- !private ["CSo15NSDateFormatter", "timeStyle"]
+- !private ["OSC20NSDateFormatterStyle", "ShortStyle"]
+- !private ["CSo12NSDictionary", "Key"]
+- !private ["CSo12NSDictionary", "Value"]
+- !private ["CSo12NSDictionary", "valueForKey"]
+- !private ["PSo17NSFastEnumeration", "Key"]
+- !private ["PSo17NSFastEnumeration", "Value"]
+- !private ["PSo17NSFastEnumeration", "valueForKey"]
+- !private ["CSo11NSFormatter", "init"]
+- !private ["CSo11NSFormatter", "stringFromDate"]
+- !private ["CSo11NSFormatter", "timeStyle"]
+- !private ["PSo16NSMutableCopying", "Key"]
+- !private ["PSo16NSMutableCopying", "Value"]
+- !private ["PSo16NSMutableCopying", "valueForKey"]
+- !private ["CSo8NSObject", "Key"]
+- !private ["CSo8NSObject", "UUIDString"]
+- !private ["CSo8NSObject", "Value"]
+- !private ["CSo8NSObject", "currentCalendar"]
+- !private ["CSo8NSObject", "dateByAddingComponents"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "setValue"]
+- !private ["CSo8NSObject", "stringFromDate"]
+- !private ["CSo8NSObject", "timeStyle"]
+- !private ["CSo8NSObject", "valueForKey"]
+- !private ["PSo16NSObjectProtocol", "Key"]
+- !private ["PSo16NSObjectProtocol", "UUIDString"]
+- !private ["PSo16NSObjectProtocol", "Value"]
+- !private ["PSo16NSObjectProtocol", "currentCalendar"]
+- !private ["PSo16NSObjectProtocol", "dateByAddingComponents"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- !private ["PSo16NSObjectProtocol", "timeStyle"]
+- !private ["PSo16NSObjectProtocol", "valueForKey"]
+- !private ["PSo14NSSecureCoding", "Key"]
+- !private ["PSo14NSSecureCoding", "UUIDString"]
+- !private ["PSo14NSSecureCoding", "Value"]
+- !private ["PSo14NSSecureCoding", "currentCalendar"]
+- !private ["PSo14NSSecureCoding", "dateByAddingComponents"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "setValue"]
+- !private ["PSo14NSSecureCoding", "valueForKey"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo6NSUUID", "UUIDString"]
+- !private ["CSo6NSUUID", "init"]
+- !private ["Ps13OptionSetType", "Minute"]
+- !private ["Ps13OptionSetType", "init"]
+- !private ["Sq", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps16RawRepresentable", "Automobile"]
+- !private ["Ps16RawRepresentable", "Minute"]
+- ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "ShortStyle"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- !private ["C38wakerapper_temp_caseinsensitive_rename7Routine", "copy"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename7Routine", "fromArray"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename7Routine", "getTotalTime"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename7Routine", "init"]
+- !private ["C38wakerapper_temp_caseinsensitive_rename7Routine", "toArray"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "valueForKey"]
+- !private ["Ps14SetAlgebraType", "Minute"]
+- !private ["Ps14SetAlgebraType", "init"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Ps10Strideable", "hashValue"]
+- ["SS", "deinit"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "Automobile"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "RawValue"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "Transit"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "deinit"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "hashValue"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "init"]
+- ["OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation", "rawValue"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "valueForKey"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
+depends-nominal:
+- "C38wakerapper_temp_caseinsensitive_rename5Alarm"
+- "Ps9AnyObject"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps11CVarArgType"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "C38wakerapper_temp_caseinsensitive_rename11Destination"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "CSo10NSCalendar"
+- !private "VSC17NSCalendarOptions"
+- !private "VSC14NSCalendarUnit"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo6NSDate"
+- !private "CSo16NSDateComponents"
+- !private "CSo15NSDateFormatter"
+- !private "OSC20NSDateFormatterStyle"
+- !private "CSo12NSDictionary"
+- !private "PSo17NSFastEnumeration"
+- !private "CSo11NSFormatter"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo6NSUUID"
+- !private "Ps13OptionSetType"
+- !private "Sq"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- !private "C38wakerapper_temp_caseinsensitive_rename7Routine"
+- !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- "SS"
+- "OC38wakerapper_temp_caseinsensitive_rename5Alarm14Transportation"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/shivkalola/Desktop/wakerapper/smart-alarm/wakerapper-Bridging-Header.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/Cintric.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricPublicConstants.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricDelegate.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricVisit.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricFind.h"
+- "./Fabric.framework/Headers/FABAttributes.h"
+- "./Fabric.framework/Headers/Fabric.h"
+- "./Fabric.framework/Modules/module.modulemap"
+- "./Crashlytics.framework/Headers/ANSCompatibility.h"
+- "./Crashlytics.framework/Headers/Answers.h"
+- "./Crashlytics.framework/Headers/CLSStackFrame.h"
+- "./Crashlytics.framework/Headers/CLSReport.h"
+- "./Crashlytics.framework/Headers/CLSLogging.h"
+- "./Crashlytics.framework/Headers/CLSAttributes.h"
+- "./Crashlytics.framework/Headers/Crashlytics.h"
+- "./Crashlytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+interface-hash: "c78b6666e78ceb547653dde30c06b446"

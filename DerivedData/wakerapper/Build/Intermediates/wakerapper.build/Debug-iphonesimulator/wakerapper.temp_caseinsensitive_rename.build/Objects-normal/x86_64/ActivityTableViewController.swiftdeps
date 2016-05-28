@@ -1,0 +1,213 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ActivityTableViewController"
+provides-nominal:
+- "C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController"
+provides-member:
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", ""]
+provides-dynamic-lookup:
+- "saveButton"
+- "activityName"
+- "viewDidLoad"
+- "activityTime"
+depends-top-level:
+- "UITableViewController"
+- "UIBarButtonItem"
+- "UITextField"
+- "ActivityTableViewController"
+depends-member:
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "UIBarButtonItem"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "UITextField"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "activityName"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "activityTime"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "deinit"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "init"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "saveButton"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController", "viewDidLoad"]
+- ["Ps9AnyObject", "activityName"]
+- ["Ps9AnyObject", "activityTime"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "saveButton"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "activityName"]
+- ["Ps11CVarArgType", "activityTime"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "saveButton"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "activityName"]
+- ["Ps28CustomDebugStringConvertible", "activityTime"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "saveButton"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "activityName"]
+- ["Ps23CustomStringConvertible", "activityTime"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "saveButton"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "activityName"]
+- ["Ps9Equatable", "activityTime"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "saveButton"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "activityName"]
+- ["Ps8Hashable", "activityTime"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "saveButton"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "activityName"]
+- ["PSo8NSCoding", "activityTime"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "saveButton"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "activityName"]
+- ["PSo26NSExtensionRequestHandling", "activityTime"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "saveButton"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "UIBarButtonItem"]
+- ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "activityName"]
+- ["CSo8NSObject", "activityTime"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "saveButton"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "activityName"]
+- ["PSo16NSObjectProtocol", "activityTime"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "saveButton"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo21UIAppearanceContainer", "activityName"]
+- ["PSo21UIAppearanceContainer", "activityTime"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "saveButton"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "activityName"]
+- ["PSo18UIContentContainer", "activityTime"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "saveButton"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "activityName"]
+- ["PSo18UIFocusEnvironment", "activityTime"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "saveButton"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "UIBarButtonItem"]
+- ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "activityName"]
+- ["CSo11UIResponder", "activityTime"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "saveButton"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo20UIScrollViewDelegate", "activityName"]
+- ["PSo20UIScrollViewDelegate", "activityTime"]
+- ["PSo20UIScrollViewDelegate", "init"]
+- ["PSo20UIScrollViewDelegate", "saveButton"]
+- ["PSo20UIScrollViewDelegate", "viewDidLoad"]
+- ["PSo20UIScrollViewDelegate", ""]
+- ["PSo16UIStateRestoring", "activityName"]
+- ["PSo16UIStateRestoring", "activityTime"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "saveButton"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["CSo21UITableViewController", "UIBarButtonItem"]
+- ["CSo21UITableViewController", "UITextField"]
+- ["CSo21UITableViewController", "activityName"]
+- ["CSo21UITableViewController", "activityTime"]
+- ["CSo21UITableViewController", "init"]
+- ["CSo21UITableViewController", "saveButton"]
+- ["CSo21UITableViewController", "viewDidLoad"]
+- ["CSo21UITableViewController", ""]
+- ["PSo21UITableViewDataSource", "activityName"]
+- ["PSo21UITableViewDataSource", "activityTime"]
+- ["PSo21UITableViewDataSource", "init"]
+- ["PSo21UITableViewDataSource", "saveButton"]
+- ["PSo21UITableViewDataSource", "viewDidLoad"]
+- ["PSo21UITableViewDataSource", ""]
+- ["PSo19UITableViewDelegate", "activityName"]
+- ["PSo19UITableViewDelegate", "activityTime"]
+- ["PSo19UITableViewDelegate", "init"]
+- ["PSo19UITableViewDelegate", "saveButton"]
+- ["PSo19UITableViewDelegate", "viewDidLoad"]
+- ["PSo19UITableViewDelegate", ""]
+- ["PSo18UITraitEnvironment", "activityName"]
+- ["PSo18UITraitEnvironment", "activityTime"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "saveButton"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "UIBarButtonItem"]
+- ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "activityName"]
+- ["CSo16UIViewController", "activityTime"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "saveButton"]
+- ["CSo16UIViewController", "viewDidLoad"]
+depends-nominal:
+- "C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename27ActivityTableViewController"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- "CSo21UITableViewController"
+- "PSo21UITableViewDataSource"
+- "PSo19UITableViewDelegate"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/shivkalola/Desktop/wakerapper/smart-alarm/wakerapper-Bridging-Header.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/Cintric.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricPublicConstants.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricDelegate.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricVisit.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricFind.h"
+- "./Fabric.framework/Headers/FABAttributes.h"
+- "./Fabric.framework/Headers/Fabric.h"
+- "./Fabric.framework/Modules/module.modulemap"
+- "./Crashlytics.framework/Headers/ANSCompatibility.h"
+- "./Crashlytics.framework/Headers/Answers.h"
+- "./Crashlytics.framework/Headers/CLSStackFrame.h"
+- "./Crashlytics.framework/Headers/CLSReport.h"
+- "./Crashlytics.framework/Headers/CLSLogging.h"
+- "./Crashlytics.framework/Headers/CLSAttributes.h"
+- "./Crashlytics.framework/Headers/Crashlytics.h"
+- "./Crashlytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+interface-hash: "92ef6e49c401ba653a36e43c86c93305"

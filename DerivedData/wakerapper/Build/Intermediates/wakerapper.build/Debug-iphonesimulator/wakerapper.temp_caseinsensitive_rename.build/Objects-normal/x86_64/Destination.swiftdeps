@@ -1,0 +1,207 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Destination"
+provides-nominal:
+- "C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination"
+provides-member:
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "MKMapItem"
+- "NSDictionary"
+- !private "CLLocationCoordinate2DMake"
+- "Destination"
+- "Double"
+- "String"
+- !private "StringLiteralType"
+- !private "MKPlacemark"
+- !private "Dictionary"
+- !private "FloatLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "CLLocationCoordinate2DMake"]
+- !private ["Ps9AnyObject", "Destination"]
+- !private ["Ps9AnyObject", "Key"]
+- !private ["Ps9AnyObject", "MKMapItem"]
+- !private ["Ps9AnyObject", "MKPlacemark"]
+- !private ["Ps9AnyObject", "Value"]
+- !private ["Ps9AnyObject", "coordinate"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "lat"]
+- !private ["Ps9AnyObject", "long"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "placemark"]
+- !private ["Ps9AnyObject", "valueForKey"]
+- ["Ps9AnyObject", ""]
+- !private ["VSC22CLLocationCoordinate2D", "latitude"]
+- !private ["VSC22CLLocationCoordinate2D", "longitude"]
+- !private ["CSo11CLPlacemark", "coordinate"]
+- !private ["CSo11CLPlacemark", "init"]
+- !private ["Ps11CVarArgType", "Key"]
+- !private ["Ps11CVarArgType", "Value"]
+- !private ["Ps11CVarArgType", "coordinate"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "name"]
+- !private ["Ps11CVarArgType", "placemark"]
+- !private ["Ps11CVarArgType", "valueForKey"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "coordinate"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "placemark"]
+- !private ["Ps28CustomDebugStringConvertible", "valueForKey"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "coordinate"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "placemark"]
+- !private ["Ps23CustomStringConvertible", "valueForKey"]
+- !private ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "CLLocationCoordinate2DMake"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "Destination"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "Double"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "MKMapItem"]
+- !private ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "MKPlacemark"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "NSDictionary"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "String"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "copy"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "deinit"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "fromDictionary"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "init"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "lat"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "long"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "name"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "toDictionary"]
+- ["C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination", "toMKMapItem"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "valueForKey"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Key"]
+- !private ["Ps9Equatable", "Value"]
+- !private ["Ps9Equatable", "coordinate"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "placemark"]
+- !private ["Ps9Equatable", "valueForKey"]
+- !private ["Ps8Hashable", "Key"]
+- !private ["Ps8Hashable", "Value"]
+- !private ["Ps8Hashable", "coordinate"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "placemark"]
+- !private ["Ps8Hashable", "valueForKey"]
+- !private ["PSo12MKAnnotation", "coordinate"]
+- !private ["PSo12MKAnnotation", "init"]
+- !private ["CSo9MKMapItem", "init"]
+- !private ["CSo9MKMapItem", "name"]
+- !private ["CSo9MKMapItem", "placemark"]
+- !private ["CSo11MKPlacemark", "coordinate"]
+- !private ["CSo11MKPlacemark", "init"]
+- !private ["PSo8NSCoding", "Key"]
+- !private ["PSo8NSCoding", "Value"]
+- !private ["PSo8NSCoding", "coordinate"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "valueForKey"]
+- !private ["PSo9NSCopying", "Key"]
+- !private ["PSo9NSCopying", "Value"]
+- !private ["PSo9NSCopying", "coordinate"]
+- !private ["PSo9NSCopying", "deinit"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "valueForKey"]
+- !private ["CSo12NSDictionary", "Key"]
+- !private ["CSo12NSDictionary", "Value"]
+- !private ["CSo12NSDictionary", "valueForKey"]
+- !private ["PSo17NSFastEnumeration", "Key"]
+- !private ["PSo17NSFastEnumeration", "Value"]
+- !private ["PSo17NSFastEnumeration", "valueForKey"]
+- !private ["PSo16NSMutableCopying", "Key"]
+- !private ["PSo16NSMutableCopying", "Value"]
+- !private ["PSo16NSMutableCopying", "valueForKey"]
+- !private ["CSo8NSObject", "Key"]
+- !private ["CSo8NSObject", "Value"]
+- !private ["CSo8NSObject", "coordinate"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "placemark"]
+- !private ["CSo8NSObject", "valueForKey"]
+- !private ["PSo16NSObjectProtocol", "Key"]
+- !private ["PSo16NSObjectProtocol", "Value"]
+- !private ["PSo16NSObjectProtocol", "coordinate"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "placemark"]
+- !private ["PSo16NSObjectProtocol", "valueForKey"]
+- !private ["PSo14NSSecureCoding", "Key"]
+- !private ["PSo14NSSecureCoding", "Value"]
+- !private ["PSo14NSSecureCoding", "coordinate"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "valueForKey"]
+- !private ["Sq", "deinit"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "valueForKey"]
+- !private ["SS", "deinit"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "valueForKey"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "VSC22CLLocationCoordinate2D"
+- !private "CSo11CLPlacemark"
+- !private "Ps11CVarArgType"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- "C66wakerapper_temp_caseinsensitive_rename_temp_caseinsensitive_rename11Destination"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
+- !private "Ps9Equatable"
+- !private "Ps8Hashable"
+- !private "PSo12MKAnnotation"
+- !private "CSo9MKMapItem"
+- !private "CSo11MKPlacemark"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo12NSDictionary"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "Sq"
+- !private "Ps12SequenceType"
+- !private "SS"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/shivkalola/Desktop/wakerapper/smart-alarm/wakerapper-Bridging-Header.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/Cintric.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricPublicConstants.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricDelegate.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricVisit.h"
+- "/Users/shivkalola/Desktop/wakerapper/./Cintric.framework/Headers/CintricFind.h"
+- "./Fabric.framework/Headers/FABAttributes.h"
+- "./Fabric.framework/Headers/Fabric.h"
+- "./Fabric.framework/Modules/module.modulemap"
+- "./Crashlytics.framework/Headers/ANSCompatibility.h"
+- "./Crashlytics.framework/Headers/Answers.h"
+- "./Crashlytics.framework/Headers/CLSStackFrame.h"
+- "./Crashlytics.framework/Headers/CLSReport.h"
+- "./Crashlytics.framework/Headers/CLSLogging.h"
+- "./Crashlytics.framework/Headers/CLSAttributes.h"
+- "./Crashlytics.framework/Headers/Crashlytics.h"
+- "./Crashlytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+interface-hash: "b8799fbd06b4d2583583c7d781b6608d"

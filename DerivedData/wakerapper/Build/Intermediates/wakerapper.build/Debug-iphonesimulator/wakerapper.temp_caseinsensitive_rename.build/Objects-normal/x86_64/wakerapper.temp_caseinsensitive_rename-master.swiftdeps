@@ -1,0 +1,17 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "a381d4924b6a0ead7984c2128c088b8d"
+build_time: [517774698, 873126000]
+inputs:
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/Activity.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/AlarmTableViewController.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/AlarmList.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/DetailTableViewController.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/AlarmTableViewCell.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/HTTP.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/LocationViewController.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/RoutineTableViewController.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/Alarm.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/ActivityTableViewController.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/Routine.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/Destination.swift": [517774094, 0]
+  "/Users/shivkalola/Desktop/wakerapper/smart-alarm/AppDelegate.swift": [517772013, 0]
