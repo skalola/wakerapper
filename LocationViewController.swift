@@ -88,10 +88,12 @@ class LocationViewController: UIViewController, UISearchBarDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
+        
+        UIBarButtonItem.appearance().tintColor = UIColor.magentaColor()
     }
 }

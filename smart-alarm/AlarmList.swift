@@ -62,7 +62,8 @@ class AlarmList {
         // Remove alarm from persistent data
         if var alarmDictionary = NSUserDefaults.standardUserDefaults().dictionaryForKey(ALARMS_KEY) {
             alarmDictionary.removeValueForKey(alarmToRemove.UUID as String)
-            NSUserDefaults.standardUserDefaults().setObject(alarmDictionary, forKey: ALARMS_KEY)        }
+            NSUserDefaults.standardUserDefaults().setObject(alarmDictionary, forKey: ALARMS_KEY)
+        }
     }
     
     func updateAlarm (alarmToUpdate: Alarm) {
@@ -78,7 +79,8 @@ class AlarmList {
         alarmToUpdate.setFollowupID(newFollowupID)
         
         // Reschedule new alarm
-        addAlarm(alarmToUpdate)        
+        addAlarm(alarmToUpdate)
+        
     }
     
     /* NOTIFICATION FUNCTIONS */
@@ -86,13 +88,6 @@ class AlarmList {
         let notification = UILocalNotification()
         notification.category = category
         notification.repeatInterval = NSCalendarUnit.Day
-        
-        func startVibration(sender: AnyObject) {
-            for _ in 1...20 {
-                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-                sleep(5)
-            }
-        }
         
         switch category {
         case "ALARM_CATEGORY":
@@ -103,8 +98,8 @@ class AlarmList {
             break
         case "FOLLOWUP_CATEGORY":
             notification.userInfo = ["UUID": alarm.followupID]
-            notification.alertBody = "Did you arrive yet?"
-            notification.fireDate = alarm.arrival
+            notification.alertBody = "Time to wake up soon..."
+            notification.fireDate = alarm.wakeup.dateByAddingTimeInterval(-5 * 60)
             notification.soundName = UILocalNotificationDefaultSoundName
             break
         default:
@@ -120,6 +115,14 @@ class AlarmList {
                 try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
                 player.play()
             } catch {
+            }
+        }
+        
+        // Vibrate
+        func startVibration() {
+            for _ in 1...20 {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                sleep(5)
             }
         }
         

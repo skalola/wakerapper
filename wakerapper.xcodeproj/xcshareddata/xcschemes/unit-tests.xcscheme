@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2093B6621BBC740200EC5C7C"
-               BuildableName = "wakerapper.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+               BuildableName = "wakerapper.app"
                BlueprintName = "wakerapper"
                ReferencedContainer = "container:wakerapper.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2093B6621BBC740200EC5C7C"
-            BuildableName = "wakerapper.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BuildableName = "wakerapper.app"
             BlueprintName = "wakerapper"
             ReferencedContainer = "container:wakerapper.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2093B6621BBC740200EC5C7C"
-            BuildableName = "wakerapper.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BuildableName = "wakerapper.app"
             BlueprintName = "wakerapper"
             ReferencedContainer = "container:wakerapper.xcodeproj">
          </BuildableReference>
@@ -99,7 +99,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2093B6621BBC740200EC5C7C"
-            BuildableName = "wakerapper.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BuildableName = "wakerapper.app"
             BlueprintName = "wakerapper"
             ReferencedContainer = "container:wakerapper.xcodeproj">
          </BuildableReference>

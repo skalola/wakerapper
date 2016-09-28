@@ -16,11 +16,49 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var travelTime: UILabel!
     @IBOutlet weak var wakeupLabel: UILabel!
+    @IBOutlet weak var bedtimeLabel: UILabel!
     
     var alarm = Alarm()
     
+    // Style cells
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = .clearColor()
+        
+        timePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
+        
+    }
+    
+    // Style section header
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let title = UILabel()
+        title.font = UIFont(name: "Futura", size: 12)!
+        title.textColor = UIColor.whiteColor()
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font=title.font
+        header.textLabel?.textColor=title.textColor
+        header.textLabel?.textAlignment = NSTextAlignment.Center
+    }
+    
+    // Style section footer
+    override func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        let title = UILabel()
+        title.font = UIFont(name: "Futura", size: 12)!
+        title.textColor = UIColor.whiteColor()
+        title.textAlignment = NSTextAlignment.Center
+        
+        let footer = view as! UITableViewHeaderFooterView
+        footer.textLabel?.font=title.font
+        footer.textLabel?.textColor=title.textColor
+        footer.textLabel?.textAlignment = NSTextAlignment.Center
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "BGmobile2"))
+        tableView.contentMode = .ScaleAspectFill
+        
         self.clearsSelectionOnViewWillAppear = true
         
         // Fix iOS 9 bug in mildy hacky way...
@@ -32,6 +70,11 @@ class DetailTableViewController: UITableViewController {
         routineLabel.text = "\(alarm.routine.getTotalTime()) minutes"
         locationLabel.text = "\(alarm.destination.name)"
         updateTimeLabels(timePicker)
+        
+        //Fonts
+        routineLabel.font = UIFont(name: "Futura", size: 16)!
+        locationLabel.font = UIFont(name: "Futura", size: 16)!
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -54,9 +97,11 @@ class DetailTableViewController: UITableViewController {
     func updateTimeLabels (sender: UIDatePicker) {
         alarm.setArrival(sender.date)
         alarm.setWakeup(alarm.calculateWakeup())
-        travelTime.text = "\(alarm.etaMinutes) minutes"
+        travelTime.text = "Your estimated travel time is \(alarm.etaMinutes) minutes."
         routineLabel.text = "\(alarm.routine.getTotalTime()) minutes"
         wakeupLabel.text = alarm.getWakeupString()
+        
+        bedtimeLabel.text = alarm.getBedtimeString()
     }
     
     /* NAVIGATION */
@@ -100,6 +145,10 @@ class DetailTableViewController: UITableViewController {
         let routineTVC = segue.sourceViewController as! RoutineTableViewController
         self.alarm.setRoutine(routineTVC.routine)
         updateTimeLabels(timePicker)
+        
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+        
     }
     
     @IBAction func cancelRoutine (segue:UIStoryboardSegue) {

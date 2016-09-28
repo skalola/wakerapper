@@ -14,6 +14,8 @@ class RoutineTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "BGmobile2"))
+        tableView.tableFooterView = UIView()
     }
     
     /* CONFIGURE ROWS AND SECTIONS */
@@ -35,7 +37,9 @@ class RoutineTableViewController: UITableViewController {
         let time = activities[indexPath.row].time
         cell.textLabel!.text = name
         cell.detailTextLabel!.text = "\(time) minutes"
+        cell.backgroundColor = .clearColor()
         return cell
+
     }
     
     /* ENABLE EDITING */

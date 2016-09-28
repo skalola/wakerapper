@@ -86,7 +86,23 @@ class Alarm {
         let dateFormatter = NSDateFormatter()
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         self.wakeup = calculateWakeup()
+        
         return dateFormatter.stringFromDate(self.wakeup)
+    }
+    
+    func getBedtimeString () -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        self.wakeup = calculateWakeup()
+        
+        let getBedtime1 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-9 * 3600))
+        let getBedtime2 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-7.5 * 3600))
+        let getBedtime3 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-6 * 3600))
+        let getBedtime4 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-4.5 * 3600))
+        
+        let bedTimes = getBedtime1 + ", " + getBedtime2 + ", " + getBedtime3 + ", " + getBedtime4
+        
+        return bedTimes
     }
     
     func getTransportString () -> String {

@@ -18,15 +18,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let ALARMS_KEY = "alarmItems"
-    let POST_URL = "https://smart-alarm-server.herokuapp.com/user_history_records.json"
+    let POST_URL = "https://wakerapper.herokuapp.com/user_history_records.json"
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        /* FABRIC IO */
-        Fabric.with([Crashlytics.self()])
+        
         
 //        /* Fix button tint */
 //        UINavigationBar.appearance().tintAdjustmentMode = UIViewTintAdjustmentMode.Normal
-//        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
+        UITabBar.appearance().barTintColor = UIColor.clearColor()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().shadowImage = UIImage()
+                
+        // Sets background to a blank/empty image
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        // Sets shadow (line below the bar) to a blank image
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Sets the translucent background color
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        UINavigationBar.appearance().translucent = true
+
         
         UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         
@@ -48,19 +62,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // ARRIVE ACTION
         let arriveAction = UIMutableUserNotificationAction()
-        arriveAction.identifier = "ARRIVE_ACTION"
-        arriveAction.title = "Yes! I've arrived."
-        arriveAction.activationMode = .Background
-        arriveAction.authenticationRequired = false
-        arriveAction.destructive = false
+//        arriveAction.identifier = "ARRIVE_ACTION"
+//        arriveAction.title = "Yes! I've arrived."
+//        arriveAction.activationMode = .Background
+//        arriveAction.authenticationRequired = false
+//        arriveAction.destructive = false
         
         // LATE ACTION
         let lateAction = UIMutableUserNotificationAction()
-        lateAction.identifier = "LATE_ACTION"
-        lateAction.title = "No, I'm late"
-        lateAction.activationMode = .Background
-        lateAction.authenticationRequired = false
-        lateAction.destructive = true
+//        lateAction.identifier = "LATE_ACTION"
+//        lateAction.title = "No, I'm late"
+//        lateAction.activationMode = .Background
+//        lateAction.authenticationRequired = false
+//        lateAction.destructive = true
         
         // FOLLOWUP CATEGORY
         let followupCategory = UIMutableUserNotificationCategory()
@@ -217,10 +231,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
+            
         }
         
         return coordinator
     }()
+    
 
     lazy var managedObjectContext: NSManagedObjectContext = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
@@ -228,6 +244,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
+        
     }()
 
     // MARK: - Core Data Saving support
@@ -245,6 +262,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
 }
 

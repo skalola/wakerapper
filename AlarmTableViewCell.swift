@@ -14,10 +14,20 @@ class AlarmTableViewCell: UITableViewCell {
     @IBOutlet weak var alarmDestination: UILabel!
     @IBOutlet weak var alarmToggle: UISwitch!
 
+    let nsDefaults = NSUserDefaults.standardUserDefaults()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.alarmToggle.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+//        self.alarmToggle.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.alarmToggle.on = self.nsDefaults.boolForKey("stateChanged:")
+
+    }
+    
+    @IBAction func switchPressed(sender: UISwitch) {
+        self.nsDefaults.setBool(self.alarmToggle.on, forKey: "stateChanged:")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -28,8 +38,8 @@ class AlarmTableViewCell: UITableViewCell {
     
     func stateChanged(switchState: UISwitch) {
         if switchState.on {
-            alarmTime.textColor = UIColor(hue: 0.5833, saturation: 0.44, brightness: 0.36, alpha: 1.0)
-            alarmDestination.textColor = UIColor(hue: 0.5833, saturation: 0.44, brightness: 0.36, alpha: 1.0)
+            alarmTime.textColor = UIColor.whiteColor()
+            alarmDestination.textColor = UIColor.whiteColor()
         } else {
             alarmTime.textColor = UIColor.lightGrayColor()
             alarmDestination.textColor = UIColor.lightGrayColor()
@@ -37,5 +47,4 @@ class AlarmTableViewCell: UITableViewCell {
     }
     
     
-
 }

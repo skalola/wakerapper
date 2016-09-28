@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate {
+class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, CLLocationManagerDelegate {
 
     var alarms:[Alarm] = []
     let locationManager = CLLocationManager()
@@ -17,7 +17,14 @@ class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "BGmobile"))
+        
         self.clearsSelectionOnViewWillAppear = true
+        
+        tableView.tableFooterView = UIView()
+        
+        self.tableView.reloadData()
         
         // Configure data source
         alarms = AlarmList.sharedInstance.allAlarms()
@@ -44,10 +51,24 @@ class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate
         self.locationManager.startUpdatingLocation()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         self.locationManager.distanceFilter = kCLLocationAccuracyKilometer
+        
+        // Check updates 
+//        self.tableView.beginUpdates()
+//        self.tableView.endUpdates()
+        print("shiv", UIApplication.sharedApplication().scheduledLocalNotifications)
+        print("shiv3", checkScheduledAlarms())
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
     override func viewWillAppear(animated: Bool) {
         checkScheduledAlarms()
+
+        super.viewWillAppear(animated)
+        
+        // Add a background view to the table view
+        tableView.backgroundView = UIImageView(image: UIImage(named: "BGmobile2"))
+        tableView.contentMode = .ScaleAspectFill
+        
     }
     
     /* HANDLE EMPTY DATA SOURCE */
@@ -74,10 +95,14 @@ class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate
     
     /* CONFIGURE CELL */
     
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = .clearColor()
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("alarmCell", forIndexPath: indexPath) as! AlarmTableViewCell
         cell.alarmTime.text! = alarms[indexPath.row].getWakeupString()
-        cell.alarmDestination!.text = alarms[indexPath.row].destination.name
+        cell.alarmDestination!.text = ( "BEDTIMES:" + " " + alarms[indexPath.row].getBedtimeString())
         cell.alarmToggle.tag = indexPath.row
         cell.alarmToggle.addTarget(self, action: Selector("toggleAlarm:"), forControlEvents: UIControlEvents.ValueChanged)
         cell.accessoryView = cell.alarmToggle
@@ -98,16 +123,20 @@ class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate
             AlarmList.sharedInstance.cancelNotification(alarms[index], category: "ALARM_CATEGORY")
             AlarmList.sharedInstance.cancelNotification(alarms[index], category: "FOLLOWUP_CATEGORY")
         }
+        
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
     }
     
     /* ENABLE EDITING */
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+
         if editingStyle == .Delete {
             AlarmList.sharedInstance.removeAlarm(alarms[indexPath.row]) // remove from persistent data
             alarms.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
+
             // Update tags for alarm state
             var t = 0
             for cell in tableView.visibleCells as! [AlarmTableViewCell] {
@@ -174,6 +203,7 @@ class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate
     @IBAction func cancelAlarm (segue:UIStoryboardSegue) {
         // Do nothing!
     }
+    
     
     /* BACKGROUND REFRESH */
     
@@ -251,6 +281,7 @@ class AlarmTableViewController: UITableViewController, CLLocationManagerDelegate
                     print("The estimated time is: \(alarm.getWakeupString())")
                     AlarmList.sharedInstance.updateAlarm(alarm)
                     self.tableView.reloadData()
+
                 })
             }
         }

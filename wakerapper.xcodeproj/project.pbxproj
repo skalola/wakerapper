@@ -37,6 +37,7 @@
 		20A5CA4C1C15FE140074DAD2 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20A5CA471C15FE140074DAD2 /* Lato-Light.ttf */; };
 		20A5CA4D1C15FE140074DAD2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20A5CA481C15FE140074DAD2 /* Lato-Regular.ttf */; };
 		410583B21CEA883200684A0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410583B11CEA883200684A0A /* MapKit.framework */; };
+		411C4FC01D89D5B700DDC089 /* PowernapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411C4FBF1D89D5B700DDC089 /* PowernapViewController.swift */; };
 		4138184B1CEF91DB006156DF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4138184A1CEF91DB006156DF /* AVFoundation.framework */; };
 		64228B951BEAF76B00263DBF /* AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64228B941BEAF76B00263DBF /* AlarmTests.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		20A5CA471C15FE140074DAD2 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		20A5CA481C15FE140074DAD2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		410583B11CEA883200684A0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		411C4FBF1D89D5B700DDC089 /* PowernapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowernapViewController.swift; sourceTree = "<group>"; };
 		4138184A1CEF91DB006156DF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		64228B941BEAF76B00263DBF /* AlarmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				202F0FCB1BD54B8C00799850 /* LocationViewController.swift */,
 				2037BDA61BD33CFA00F45644 /* RoutineTableViewController.swift */,
 				208D95B21BD3F0C60099611F /* ActivityTableViewController.swift */,
+				411C4FBF1D89D5B700DDC089 /* PowernapViewController.swift */,
 			);
 			name = "alarm-controllers";
 			sourceTree = "<group>";
@@ -292,7 +295,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					2093B6621BBC740200EC5C7C = {
@@ -403,6 +406,7 @@
 				2037BDA71BD33CFA00F45644 /* RoutineTableViewController.swift in Sources */,
 				2092ED141BDEC97700D8F112 /* Alarm.swift in Sources */,
 				2093B66F1BBC740200EC5C7C /* smart_alarm.xcdatamodeld in Sources */,
+				411C4FC01D89D5B700DDC089 /* PowernapViewController.swift in Sources */,
 				208D95B31BD3F0C60099611F /* ActivityTableViewController.swift in Sources */,
 				2034B68E1BDFD3A700CB6FCA /* Routine.swift in Sources */,
 				2051920A1BFD233300457CEB /* Destination.swift in Sources */,
@@ -467,6 +471,7 @@
 		2093B68C1BBC740200EC5C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -477,15 +482,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -514,6 +520,7 @@
 		2093B68D1BBC740200EC5C7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -524,15 +531,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -547,6 +555,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -554,45 +563,53 @@
 		2093B68F1BBC740200EC5C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
+				DEVELOPMENT_TEAM = GGW6DQ293Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "smart-alarm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nobelapps.wakerapper;
 				PRODUCT_NAME = wakerapper;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "23621bdb-1bd1-45c5-8fe5-dfb9d37a460f";
+				PROVISIONING_PROFILE_SPECIFIER = "wakerapper Provisioning Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "smart-alarm/wakerapper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		2093B6901BBC740200EC5C7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
+				DEVELOPMENT_TEAM = GGW6DQ293Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "smart-alarm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nobelapps.wakerapper;
 				PRODUCT_NAME = wakerapper;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "23621bdb-1bd1-45c5-8fe5-dfb9d37a460f";
+				PROVISIONING_PROFILE_SPECIFIER = "wakerapper Provisioning Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "smart-alarm/wakerapper-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -604,6 +621,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5356.smart-alarmTests";
 				PRODUCT_NAME = wakerapper;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wakerapper.app/wakerapper";
 			};
 			name = Debug;
@@ -616,6 +634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5356.smart-alarmTests";
 				PRODUCT_NAME = wakerapper;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wakerapper.app/wakerapper";
 			};
 			name = Release;
@@ -627,6 +646,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5356.smart-alarmUITests";
 				PRODUCT_NAME = wakerapper;
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = "smart-alarm";
 				USES_XCTRUNNER = YES;
 			};
@@ -639,6 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.cs5356.smart-alarmUITests";
 				PRODUCT_NAME = wakerapper;
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = "smart-alarm";
 				USES_XCTRUNNER = YES;
 			};
