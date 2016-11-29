@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, CLLocationManagerDelegate {
-
+    
     var alarms:[Alarm] = []
     let locationManager = CLLocationManager()
     let noDataLabel = UILabel()
@@ -32,14 +32,15 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
         // Check if empty
         noDataLabel.text = "No scheduled alarms"
         noDataLabel.font = UIFont(name: "Lato", size: 20)
-        noDataLabel.textAlignment = NSTextAlignment.Center
+        noDataLabel.textAlignment = NSTextAlignment.center
         noDataLabel.textColor = UIColor(hue: 0.5833, saturation: 0.44, brightness: 0.36, alpha: 1.0)
         noDataLabel.alpha = 0.0
         self.tableView.backgroundView = noDataLabel
         checkScheduledAlarms()
-
+        
         // Enable edit button
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
         
         // Manage selection during editing mode
         self.tableView.allowsSelection = false
@@ -52,76 +53,76 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         self.locationManager.distanceFilter = kCLLocationAccuracyKilometer
         
-        // Check updates 
-//        self.tableView.beginUpdates()
-//        self.tableView.endUpdates()
-        print("shiv", UIApplication.sharedApplication().scheduledLocalNotifications)
-        print("shiv3", checkScheduledAlarms())
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        // Helper Snippets
+        // self.tableView.beginUpdates()
+        // self.tableView.endUpdates()
+        // print("shiv", UIApplication.shared.scheduledLocalNotifications)
+        // print("shiv3", checkScheduledAlarms())
+        // UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         checkScheduledAlarms()
-
+        
         super.viewWillAppear(animated)
         
         // Add a background view to the table view
         tableView.backgroundView = UIImageView(image: UIImage(named: "BGmobile2"))
-        tableView.contentMode = .ScaleAspectFill
+        tableView.contentMode = .scaleAspectFill
         
     }
     
     /* HANDLE EMPTY DATA SOURCE */
     
     func checkScheduledAlarms () {
-        UIView.animateWithDuration(0.25, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             if self.alarms.count == 0 {
                 self.noDataLabel.alpha = 1.0
             } else {
                 self.noDataLabel.alpha = 0.0
             }
-        })  
+        })
     }
-
+    
     /* CONFIGURE ROWS AND SECTIONS */
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return alarms.count
     }
     
     /* CONFIGURE CELL */
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = .clearColor()
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("alarmCell", forIndexPath: indexPath) as! AlarmTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell", for: indexPath as IndexPath) as! AlarmTableViewCell
         cell.alarmTime.text! = alarms[indexPath.row].getWakeupString()
         cell.alarmDestination!.text = ( "BEDTIMES:" + " " + alarms[indexPath.row].getBedtimeString())
         cell.alarmToggle.tag = indexPath.row
-        cell.alarmToggle.addTarget(self, action: Selector("toggleAlarm:"), forControlEvents: UIControlEvents.ValueChanged)
+        cell.alarmToggle.addTarget(self, action: #selector(toggleAlarm(_:)), for: UIControlEvents.valueChanged)
         cell.accessoryView = cell.alarmToggle
         return cell
     }
     
     /* TOGGLE ALARM STATE */
     
-    func toggleAlarm (switchState: UISwitch) {
+    func toggleAlarm (_ switchState: UISwitch) {
         let index = switchState.tag
         
-        if switchState.on {
+        if switchState.isOn {
             alarms[index].turnOn()
-            AlarmList.sharedInstance.scheduleNotification(alarms[index], category: "ALARM_CATEGORY")
-            AlarmList.sharedInstance.scheduleNotification(alarms[index], category: "FOLLOWUP_CATEGORY")
+            AlarmList.sharedInstance.scheduleNotification(alarm: alarms[index], category: "ALARM_CATEGORY")
+            AlarmList.sharedInstance.scheduleNotification(alarm: alarms[index], category: "FOLLOWUP_CATEGORY")
         } else {
             alarms[index].turnOff()
-            AlarmList.sharedInstance.cancelNotification(alarms[index], category: "ALARM_CATEGORY")
-            AlarmList.sharedInstance.cancelNotification(alarms[index], category: "FOLLOWUP_CATEGORY")
+            AlarmList.sharedInstance.cancelNotification(alarm: alarms[index], category: "ALARM_CATEGORY")
+            AlarmList.sharedInstance.cancelNotification(alarm: alarms[index], category: "FOLLOWUP_CATEGORY")
         }
         
         self.tableView.beginUpdates()
@@ -130,35 +131,38 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
     
     /* ENABLE EDITING */
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-
-        if editingStyle == .Delete {
-            AlarmList.sharedInstance.removeAlarm(alarms[indexPath.row]) // remove from persistent data
-            alarms.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            AlarmList.sharedInstance.removeAlarm(alarmToRemove: alarms[indexPath.row]) // remove from persistent data
+            AlarmList.sharedInstance.cancelNotification(alarm: alarms[indexPath.row], category: "ALARM_CATEGORY")
+            AlarmList.sharedInstance.cancelNotification(alarm: alarms[indexPath.row], category: "FOLLOWUP_CATEGORY")
+            alarms.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+            
             // Update tags for alarm state
             var t = 0
             for cell in tableView.visibleCells as! [AlarmTableViewCell] {
-                cell.alarmToggle.tag = t++
+                cell.alarmToggle.tag = t
+                
+                return t += 1
             }
             
             checkScheduledAlarms()
         }
+        
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        if (self.editing == true) {
-            performSegueWithIdentifier("editAlarm", sender: self)
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (self.isEditing == true) {
+            performSegue(withIdentifier: "editAlarm", sender: self)
         }
     }
-
+    
     /* NAVIGATION */
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let navVC = segue.destinationViewController as! UINavigationController
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navVC = segue.destination as! UINavigationController
         let detailTVC = navVC.viewControllers.first as! DetailTableViewController
         
         if (segue.identifier == "editAlarm") {
@@ -173,30 +177,32 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
     /* UNWIND SEGUES */
     
     @IBAction func saveAlarm (segue:UIStoryboardSegue) {
-        let detailTVC = segue.sourceViewController as! DetailTableViewController
+        let detailTVC = segue.source as! DetailTableViewController
         let newAlarm = detailTVC.alarm.copy()
         
-        if (self.tableView.editing == false) {
+        if (self.tableView.isEditing == false) {
             // TODO: FIX THIS!!!
             if (newAlarm.destination.name == "") {
                 return
             }
-        
-            let indexPath = NSIndexPath(forRow: alarms.count, inSection: 0)
+            
+            let indexPath = NSIndexPath(row: alarms.count, section: 0)
             alarms.append(newAlarm)
-            AlarmList.sharedInstance.addAlarm(newAlarm)
-
+            AlarmList.sharedInstance.addAlarm(newAlarm: newAlarm)
+            
             self.tableView.beginUpdates()
-            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            self.tableView.insertRows(at: [indexPath as IndexPath], with: .fade)
             self.tableView.endUpdates()
         } else {
-            let indexPath = self.tableView.indexPathForSelectedRow!
-            self.alarms[indexPath.row] = detailTVC.alarm.copy()
-            AlarmList.sharedInstance.updateAlarm(self.alarms[indexPath.row])
-
-            self.tableView.beginUpdates()
-            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            self.tableView.endUpdates()
+            if self.tableView.indexPathForSelectedRow != nil {
+                let indexPath = self.tableView.indexPathForSelectedRow!
+                
+                self.alarms[indexPath.row] = detailTVC.alarm.copy()
+                AlarmList.sharedInstance.updateAlarm(alarmToUpdate: self.alarms[indexPath.row])
+                self.tableView.beginUpdates()
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
+                self.tableView.endUpdates()
+            }
         }
     }
     
@@ -209,9 +215,9 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
     
     // TODO: FIX!!!
     
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    private func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         //for alarm in self.alarms {
-        for var index = 0; index < alarms.count; index++ {
+        for index in 0 ..< alarms.count {
             let alarm = alarms[index]
             
             if alarm.isActive {
@@ -220,25 +226,25 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
                 request.destination = alarm.destination.toMKMapItem()
                 
                 if alarm.transportation == .Transit {
-                    request.transportType = .Transit
+                    request.transportType = .transit
                 } else {
-                    request.transportType = .Automobile
+                    request.transportType = .automobile
                 }
                 
                 request.requestsAlternateRoutes = false
                 let direction = MKDirections(request: request)
-                direction.calculateETAWithCompletionHandler({
+                direction.calculateETA(completionHandler: {
                     (response, err) -> Void in
                     if response == nil {
-                        print("Inside didUpdateToLocation: Failed to get routes.")
+                        //                        print("Inside didUpdateToLocation: Failed to get routes.")
                         self.tableView.reloadData()
                         return
                     }
                     let minutes = (response?.expectedTravelTime)! / 60.0
-                    alarm.setETA(Int(round(minutes)))
-                    print("Inside didUpdateToLocation: \(minutes)")
-                    print("The estimated time is: \(alarm.getWakeupString())")
-                    AlarmList.sharedInstance.updateAlarm(alarm)
+                    alarm.setETA(etaMinutes: Int(round(minutes)))
+                    //                    print("Inside didUpdateToLocation: \(minutes)")
+                    //                    print("The estimated time is: \(alarm.getWakeupString())")
+                    AlarmList.sharedInstance.updateAlarm(alarmToUpdate: alarm)
                     self.tableView.reloadData()
                 })
             }
@@ -247,11 +253,11 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
     
     func backgroundFetchDone() {
         print("Fetch completion handler called.")
-        //locationManager.stopUpdatingLocation()
+//        locationManager.stopUpdatingLocation()
     }
     
     func fetch(completionHandler: () -> Void) {
-        for var index = 0; index < alarms.count; index++ {
+        for index in 0 ..< alarms.count {
             let alarm = alarms[index]
             
             if alarm.isActive {
@@ -261,14 +267,14 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
                 request.destination = alarm.destination.toMKMapItem()
                 
                 if alarm.transportation == .Transit {
-                    request.transportType = .Transit
+                    request.transportType = .transit
                 } else {
-                    request.transportType = .Automobile
+                    request.transportType = .automobile
                 }
                 
                 request.requestsAlternateRoutes = false
                 let direction = MKDirections(request: request)
-                direction.calculateETAWithCompletionHandler({
+                direction.calculateETA(completionHandler: {
                     (response, err) -> Void in
                     if response == nil {
                         print("Inside fetch: Failed to get routes.")
@@ -276,12 +282,12 @@ class AlarmTableViewController: UITableViewController, UINavigationBarDelegate, 
                         return
                     }
                     let minutes = (response?.expectedTravelTime)! / 60.0
-                    alarm.setETA(Int(round(minutes)))
+                    alarm.setETA(etaMinutes: Int(round(minutes)))
                     print("Inside fetch: \(minutes)")
                     print("The estimated time is: \(alarm.getWakeupString())")
-                    AlarmList.sharedInstance.updateAlarm(alarm)
+                    AlarmList.sharedInstance.updateAlarm(alarmToUpdate: alarm)
                     self.tableView.reloadData()
-
+                    
                 })
             }
         }

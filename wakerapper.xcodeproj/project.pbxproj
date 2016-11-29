@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,6 +39,12 @@
 		410583B21CEA883200684A0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410583B11CEA883200684A0A /* MapKit.framework */; };
 		411C4FC01D89D5B700DDC089 /* PowernapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411C4FBF1D89D5B700DDC089 /* PowernapViewController.swift */; };
 		4138184B1CEF91DB006156DF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4138184A1CEF91DB006156DF /* AVFoundation.framework */; };
+		41F0695C1DDF9A9F007AEDB5 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F0695B1DDF9A9F007AEDB5 /* MainTableViewController.swift */; };
+		41F0695E1DDF9B1A007AEDB5 /* ScanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F0695D1DDF9B1A007AEDB5 /* ScanTableViewController.swift */; };
+		41F069601DDF9B3D007AEDB5 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F0695F1DDF9B3D007AEDB5 /* DeviceViewController.swift */; };
+		44336E8E5BAB8E427F141C22 /* Pods_wakerapperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8BB9340258BD737F351337 /* Pods_wakerapperUITests.framework */; };
+		4472F219A277D4DFE8E46CAA /* Pods_wakerapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FDDBE5C55536D1166FC681 /* Pods_wakerapperTests.framework */; };
+		5544970EA49EAA04C57C62D1 /* Pods_wakerapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C15A734B54CCFD17E44A41 /* Pods_wakerapper.framework */; };
 		64228B951BEAF76B00263DBF /* AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64228B941BEAF76B00263DBF /* AlarmTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AACB092DE60F5BB75A57D9E /* Pods-wakerapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakerapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakerapperTests/Pods-wakerapperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		200638BF1BDEBADE00799CFC /* AlarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewController.swift; sourceTree = "<group>"; };
 		200B12A51BC576280015B40F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		200B12A61BC576280015B40F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -96,7 +103,20 @@
 		410583B11CEA883200684A0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		411C4FBF1D89D5B700DDC089 /* PowernapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowernapViewController.swift; sourceTree = "<group>"; };
 		4138184A1CEF91DB006156DF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		41CC2FE01DBEE8910038C948 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		41F0695B1DDF9A9F007AEDB5 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		41F0695D1DDF9B1A007AEDB5 /* ScanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTableViewController.swift; sourceTree = "<group>"; };
+		41F0695F1DDF9B3D007AEDB5 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		41F069611DDF9C11007AEDB5 /* wakerapper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wakerapper-Bridging-Header.h"; sourceTree = "<group>"; };
+		43DBE98071E0C577EA556DAC /* Pods-wakerapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakerapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakerapper/Pods-wakerapper.debug.xcconfig"; sourceTree = "<group>"; };
 		64228B941BEAF76B00263DBF /* AlarmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTests.swift; sourceTree = "<group>"; };
+		67FDDBE5C55536D1166FC681 /* Pods_wakerapperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakerapperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C15A734B54CCFD17E44A41 /* Pods_wakerapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakerapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98B8DFEED0C265FD6E54BE9C /* Pods-wakerapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakerapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakerapperTests/Pods-wakerapperTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E8BB9340258BD737F351337 /* Pods_wakerapperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wakerapperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1B130FD5AA6375FC5E54C7 /* Pods-wakerapperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakerapperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wakerapperUITests/Pods-wakerapperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7FC1960B7E3813F8257EBB4 /* Pods-wakerapperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakerapperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakerapperUITests/Pods-wakerapperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FABB4E5EBF083772B8ECA532 /* Pods-wakerapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakerapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-wakerapper/Pods-wakerapper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +128,7 @@
 				200B12A81BC576280015B40F /* Crashlytics.framework in Frameworks */,
 				410583B21CEA883200684A0A /* MapKit.framework in Frameworks */,
 				200B12A71BC576280015B40F /* Fabric.framework in Frameworks */,
+				5544970EA49EAA04C57C62D1 /* Pods_wakerapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4472F219A277D4DFE8E46CAA /* Pods_wakerapperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44336E8E5BAB8E427F141C22 /* Pods_wakerapperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,10 +157,13 @@
 				2092ED151BDEC99E00D8F112 /* AlarmTableViewCell.swift */,
 				200638BF1BDEBADE00799CFC /* AlarmTableViewController.swift */,
 				20A092B51BD0234200745784 /* DetailTableViewController.swift */,
-				202F0FCB1BD54B8C00799850 /* LocationViewController.swift */,
 				2037BDA61BD33CFA00F45644 /* RoutineTableViewController.swift */,
 				208D95B21BD3F0C60099611F /* ActivityTableViewController.swift */,
+				202F0FCB1BD54B8C00799850 /* LocationViewController.swift */,
 				411C4FBF1D89D5B700DDC089 /* PowernapViewController.swift */,
+				41F0695B1DDF9A9F007AEDB5 /* MainTableViewController.swift */,
+				41F0695D1DDF9B1A007AEDB5 /* ScanTableViewController.swift */,
+				41F0695F1DDF9B3D007AEDB5 /* DeviceViewController.swift */,
 			);
 			name = "alarm-controllers";
 			sourceTree = "<group>";
@@ -160,10 +186,8 @@
 			children = (
 				2093B6651BBC740200EC5C7C /* wakerapper */,
 				2093B67D1BBC740200EC5C7C /* wakerapperTests */,
-				4138184A1CEF91DB006156DF /* AVFoundation.framework */,
-				410583B11CEA883200684A0A /* MapKit.framework */,
-				200B12A51BC576280015B40F /* Fabric.framework */,
-				200B12A61BC576280015B40F /* Crashlytics.framework */,
+				416109831DBEE3C0009F0968 /* Frameworks */,
+				F32DCC5D1A9B253C62F8E6D7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +215,7 @@
 				2093B6721BBC740200EC5C7C /* LaunchScreen.storyboard */,
 				2093B6751BBC740200EC5C7C /* Info.plist */,
 				2093B66D1BBC740200EC5C7C /* smart_alarm.xcdatamodeld */,
+				41F069611DDF9C11007AEDB5 /* wakerapper-Bridging-Header.h */,
 			);
 			name = wakerapper;
 			path = "smart-alarm";
@@ -231,6 +256,34 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		416109831DBEE3C0009F0968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4138184A1CEF91DB006156DF /* AVFoundation.framework */,
+				410583B11CEA883200684A0A /* MapKit.framework */,
+				200B12A51BC576280015B40F /* Fabric.framework */,
+				200B12A61BC576280015B40F /* Crashlytics.framework */,
+				41CC2FE01DBEE8910038C948 /* CoreBluetooth.framework */,
+				96C15A734B54CCFD17E44A41 /* Pods_wakerapper.framework */,
+				67FDDBE5C55536D1166FC681 /* Pods_wakerapperTests.framework */,
+				9E8BB9340258BD737F351337 /* Pods_wakerapperUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F32DCC5D1A9B253C62F8E6D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43DBE98071E0C577EA556DAC /* Pods-wakerapper.debug.xcconfig */,
+				FABB4E5EBF083772B8ECA532 /* Pods-wakerapper.release.xcconfig */,
+				0AACB092DE60F5BB75A57D9E /* Pods-wakerapperTests.debug.xcconfig */,
+				98B8DFEED0C265FD6E54BE9C /* Pods-wakerapperTests.release.xcconfig */,
+				AA1B130FD5AA6375FC5E54C7 /* Pods-wakerapperUITests.debug.xcconfig */,
+				E7FC1960B7E3813F8257EBB4 /* Pods-wakerapperUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,10 +291,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2093B68E1BBC740200EC5C7C /* Build configuration list for PBXNativeTarget "wakerapper" */;
 			buildPhases = (
+				5C7BD601FE744D6D4BE6B1AB /* [CP] Check Pods Manifest.lock */,
 				2093B65F1BBC740200EC5C7C /* Sources */,
 				2093B6601BBC740200EC5C7C /* Frameworks */,
 				2093B6611BBC740200EC5C7C /* Resources */,
 				203272211BC573A800E1D35F /* ShellScript */,
+				5CE44F5174C3E475D339A032 /* [CP] Embed Pods Frameworks */,
+				20E17D69534CD3EB6D9073BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2093B6911BBC740200EC5C7C /* Build configuration list for PBXNativeTarget "wakerapperTests" */;
 			buildPhases = (
+				72E177EAB4AC24CEBF583F1F /* [CP] Check Pods Manifest.lock */,
 				2093B6761BBC740200EC5C7C /* Sources */,
 				2093B6771BBC740200EC5C7C /* Frameworks */,
 				2093B6781BBC740200EC5C7C /* Resources */,
+				766711575E56CA214E1014FE /* [CP] Embed Pods Frameworks */,
+				B38DA0A29137DB16450A4773 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,9 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2093B6941BBC740200EC5C7C /* Build configuration list for PBXNativeTarget "wakerapperUITests" */;
 			buildPhases = (
+				5F47D8CC3CC2DC980EB8AF0F /* [CP] Check Pods Manifest.lock */,
 				2093B6811BBC740200EC5C7C /* Sources */,
 				2093B6821BBC740200EC5C7C /* Frameworks */,
 				2093B6831BBC740200EC5C7C /* Resources */,
+				A9774879509DF8690E609D3A /* [CP] Embed Pods Frameworks */,
+				1E588A8BB7F50BCC8AD8D001 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,15 +357,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					2093B6621BBC740200EC5C7C = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = GGW6DQ293Y;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
 							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -323,7 +389,7 @@
 				};
 			};
 			buildConfigurationList = 2093B65E1BBC740200EC5C7C /* Build configuration list for PBXProject "wakerapper" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -376,6 +442,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E588A8BB7F50BCC8AD8D001 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakerapperUITests/Pods-wakerapperUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		203272211BC573A800E1D35F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +470,126 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 7ec401665c34b95664efc7acee2d43ac7189ec9b bd3fa6a63bf4b05e78c6ab16070719c6dcdf7bafc4db53ec5a3011c85edf78b0";
 		};
+		20E17D69534CD3EB6D9073BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakerapper/Pods-wakerapper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C7BD601FE744D6D4BE6B1AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CE44F5174C3E475D339A032 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakerapper/Pods-wakerapper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F47D8CC3CC2DC980EB8AF0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72E177EAB4AC24CEBF583F1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		766711575E56CA214E1014FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakerapperTests/Pods-wakerapperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9774879509DF8690E609D3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakerapperUITests/Pods-wakerapperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B38DA0A29137DB16450A4773 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wakerapperTests/Pods-wakerapperTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -400,12 +601,15 @@
 				200638C01BDEBADE00799CFC /* AlarmTableViewController.swift in Sources */,
 				209443DD1BFB7274000E46B0 /* AlarmList.swift in Sources */,
 				20A092B61BD0234200745784 /* DetailTableViewController.swift in Sources */,
+				41F0695C1DDF9A9F007AEDB5 /* MainTableViewController.swift in Sources */,
 				2092ED161BDEC99E00D8F112 /* AlarmTableViewCell.swift in Sources */,
 				2093B6981BBC746C00EC5C7C /* HTTP.swift in Sources */,
 				202F0FCC1BD54B8C00799850 /* LocationViewController.swift in Sources */,
+				41F069601DDF9B3D007AEDB5 /* DeviceViewController.swift in Sources */,
 				2037BDA71BD33CFA00F45644 /* RoutineTableViewController.swift in Sources */,
 				2092ED141BDEC97700D8F112 /* Alarm.swift in Sources */,
 				2093B66F1BBC740200EC5C7C /* smart_alarm.xcdatamodeld in Sources */,
+				41F0695E1DDF9B1A007AEDB5 /* ScanTableViewController.swift in Sources */,
 				411C4FC01D89D5B700DDC089 /* PowernapViewController.swift in Sources */,
 				208D95B31BD3F0C60099611F /* ActivityTableViewController.swift in Sources */,
 				2034B68E1BDFD3A700CB6FCA /* Routine.swift in Sources */,
@@ -491,7 +695,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
@@ -514,6 +718,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -556,20 +761,22 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		2093B68F1BBC740200EC5C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43DBE98071E0C577EA556DAC /* Pods-wakerapper.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
-				DEVELOPMENT_TEAM = GGW6DQ293Y;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -579,24 +786,25 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nobelapps.wakerapper;
 				PRODUCT_NAME = wakerapper;
-				PROVISIONING_PROFILE = "23621bdb-1bd1-45c5-8fe5-dfb9d37a460f";
-				PROVISIONING_PROFILE_SPECIFIER = "wakerapper Provisioning Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "smart-alarm/wakerapper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		2093B6901BBC740200EC5C7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FABB4E5EBF083772B8ECA532 /* Pods-wakerapper.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shiv Kalola (GGW6DQ293Y)";
-				DEVELOPMENT_TEAM = GGW6DQ293Y;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -606,15 +814,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nobelapps.wakerapper;
 				PRODUCT_NAME = wakerapper;
-				PROVISIONING_PROFILE = "23621bdb-1bd1-45c5-8fe5-dfb9d37a460f";
-				PROVISIONING_PROFILE_SPECIFIER = "wakerapper Provisioning Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "smart-alarm/wakerapper-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
 		2093B6921BBC740200EC5C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AACB092DE60F5BB75A57D9E /* Pods-wakerapperTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "smart-alarmTests/Info.plist";
@@ -628,6 +837,7 @@
 		};
 		2093B6931BBC740200EC5C7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B8DFEED0C265FD6E54BE9C /* Pods-wakerapperTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "smart-alarmTests/Info.plist";
@@ -641,6 +851,7 @@
 		};
 		2093B6951BBC740200EC5C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA1B130FD5AA6375FC5E54C7 /* Pods-wakerapperUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "smart-alarmUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -654,6 +865,7 @@
 		};
 		2093B6961BBC740200EC5C7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7FC1960B7E3813F8257EBB4 /* Pods-wakerapperUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "smart-alarmUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

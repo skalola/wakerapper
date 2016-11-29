@@ -31,8 +31,8 @@ class Alarm {
     /* CONSTRUCTORS */
     
     init () {
-        self.UUID = NSUUID().UUIDString
-        self.followupID = NSUUID().UUIDString
+        self.UUID = NSUUID().uuidString
+        self.followupID = NSUUID().uuidString
         self.isActive = true
         self.arrival = NSDate()
         self.routine = Routine()
@@ -43,7 +43,7 @@ class Alarm {
         self.wakeup = calculateWakeup()
     }
     
-    init (UUID: String = NSUUID().UUIDString, followupID: String = NSUUID().UUIDString, arrival: NSDate, routine: Routine, transportation: Transportation, destination: Destination) {
+    init (UUID: String = NSUUID().uuidString, followupID: String = NSUUID().uuidString, arrival: NSDate, routine: Routine, transportation: Transportation, destination: Destination) {
         self.UUID = UUID
         self.followupID = followupID
         self.isActive = true
@@ -83,22 +83,22 @@ class Alarm {
     }
     
     func getWakeupString () -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.short
         self.wakeup = calculateWakeup()
         
-        return dateFormatter.stringFromDate(self.wakeup)
+        return dateFormatter.string(from: self.wakeup as Date)
     }
     
     func getBedtimeString () -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.short
         self.wakeup = calculateWakeup()
         
-        let getBedtime1 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-9 * 3600))
-        let getBedtime2 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-7.5 * 3600))
-        let getBedtime3 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-6 * 3600))
-        let getBedtime4 = dateFormatter.stringFromDate(self.wakeup.dateByAddingTimeInterval(-4.5 * 3600))
+        let getBedtime1 = dateFormatter.string(from: self.wakeup.addingTimeInterval(-9 * 3600) as Date)
+        let getBedtime2 = dateFormatter.string(from: self.wakeup.addingTimeInterval(-7.5 * 3600) as Date)
+        let getBedtime3 = dateFormatter.string(from: self.wakeup.addingTimeInterval(-6 * 3600) as Date)
+        let getBedtime4 = dateFormatter.string(from: self.wakeup.addingTimeInterval(-4.5 * 3600) as Date)
         
         let bedTimes = getBedtime1 + ", " + getBedtime2 + ", " + getBedtime3 + ", " + getBedtime4
         
@@ -112,10 +112,15 @@ class Alarm {
     func calculateWakeup() -> NSDate {
         let components: NSDateComponents = NSDateComponents()
         let combinedTime = self.routine.getTotalTime() + self.etaMinutes
-        components.setValue(combinedTime*(-1), forComponent: NSCalendarUnit.Minute);
-        let result = NSCalendar.currentCalendar().dateByAddingComponents(components, toDate: self.arrival, options: NSCalendarOptions(rawValue: 0))
-        return result!
+        components.setValue(combinedTime*(-1), forComponent: NSCalendar.Unit.minute);
+        
+        let result = Calendar.current.date(byAdding: components as DateComponents, to: self.arrival as Date)
+//        let result = Calendar.current.dateByAddingComponents(components, toDate: self.arrival, options: NSCalendar.Options(rawValue: 0))
+        
+        return result! as NSDate
     }
+    
+    
     
     /* ACCESS CONTROL METHODS */
     
@@ -169,14 +174,14 @@ class Alarm {
     }
     
     func fromDictionary (dict: NSDictionary) {
-        self.UUID = dict.valueForKey("UUID") as! String
-        self.followupID = dict.valueForKey("followupID") as! String
-        self.isActive = dict.valueForKey("isActive") as! Bool
-        self.arrival = dict.valueForKey("arrival") as! NSDate
-        self.routine.fromArray(dict.valueForKey("routine") as! NSArray)
-        self.etaMinutes = dict.valueForKey("etaMinutes") as! Int
-        self.transportation = Transportation(rawValue: dict.valueForKey("transportation") as! String)!
-        self.destination.fromDictionary(dict.valueForKey("destination") as! NSDictionary)
-        self.wakeup = dict.valueForKey("wakeup") as! NSDate
+        self.UUID = dict.value(forKey: "UUID") as! String
+        self.followupID = dict.value(forKey: "followupID") as! String
+        self.isActive = dict.value(forKey: "isActive") as! Bool
+        self.arrival = dict.value(forKey: "arrival") as! NSDate
+        self.routine.fromArray(array: dict.value(forKey: "routine") as! NSArray)
+        self.etaMinutes = dict.value(forKey: "etaMinutes") as! Int
+        self.transportation = Transportation(rawValue: dict.value(forKey: "transportation") as! String)!
+        self.destination.fromDictionary(dict: dict.value(forKey: "destination") as! NSDictionary)
+        self.wakeup = dict.value(forKey: "wakeup") as! NSDate
     }
 }

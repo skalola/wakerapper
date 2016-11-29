@@ -21,55 +21,54 @@ class DetailTableViewController: UITableViewController {
     var alarm = Alarm()
     
     // Style cells
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = .clearColor()
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
         
-        timePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
-        
+        timePicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
     // Style section header
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let title = UILabel()
         title.font = UIFont(name: "Futura", size: 12)!
-        title.textColor = UIColor.whiteColor()
+        title.textColor = UIColor.white
         
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font=title.font
         header.textLabel?.textColor=title.textColor
-        header.textLabel?.textAlignment = NSTextAlignment.Center
+        header.textLabel?.textAlignment = NSTextAlignment.center
     }
     
     // Style section footer
-    override func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         let title = UILabel()
         title.font = UIFont(name: "Futura", size: 12)!
-        title.textColor = UIColor.whiteColor()
-        title.textAlignment = NSTextAlignment.Center
+        title.textColor = UIColor.white
+        title.textAlignment = NSTextAlignment.center
         
         let footer = view as! UITableViewHeaderFooterView
         footer.textLabel?.font=title.font
         footer.textLabel?.textColor=title.textColor
-        footer.textLabel?.textAlignment = NSTextAlignment.Center
+        footer.textLabel?.textAlignment = NSTextAlignment.center
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "BGmobile2"))
-        tableView.contentMode = .ScaleAspectFill
+        tableView.contentMode = .scaleAspectFill
         
         self.clearsSelectionOnViewWillAppear = true
         
         // Fix iOS 9 bug in mildy hacky way...
-        timePicker.datePickerMode = .DateAndTime
-        timePicker.datePickerMode = .Time
+        timePicker.datePickerMode = .dateAndTime
+        timePicker.datePickerMode = .time
         
         // Data model
-        timePicker.setDate(alarm.arrival, animated: true)
+        timePicker.setDate(alarm.arrival as Date, animated: true)
         routineLabel.text = "\(alarm.routine.getTotalTime()) minutes"
         locationLabel.text = "\(alarm.destination.name)"
-        updateTimeLabels(timePicker)
+        updateTimeLabels(sender: timePicker)
         
         //Fonts
         routineLabel.font = UIFont(name: "Futura", size: 16)!
@@ -77,26 +76,26 @@ class DetailTableViewController: UITableViewController {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if alarm.destination.name == "" {
-            self.saveButton.enabled = false
+            self.saveButton.isEnabled = false
         } else {
-            self.saveButton.enabled = true
+            self.saveButton.isEnabled = true
         }
         if let selected = self.tableView.indexPathForSelectedRow {
-            self.tableView.deselectRowAtIndexPath(selected, animated: true)
+            self.tableView.deselectRow(at: selected, animated: true)
         }
     }
     
     /* FUNCTIONS */
     
-    @IBAction func timeChanged(sender: UIDatePicker) {
-        updateTimeLabels(sender)
+    @IBAction func timeChanged(_ sender: UIDatePicker) {
+        updateTimeLabels(sender: sender)
     }
 
     func updateTimeLabels (sender: UIDatePicker) {
-        alarm.setArrival(sender.date)
-        alarm.setWakeup(alarm.calculateWakeup())
+        alarm.setArrival(arrival: sender.date as NSDate)
+        alarm.setWakeup(wakeup: alarm.calculateWakeup())
         travelTime.text = "Your estimated travel time is \(alarm.etaMinutes) minutes."
         routineLabel.text = "\(alarm.routine.getTotalTime()) minutes"
         wakeupLabel.text = alarm.getWakeupString()
@@ -105,53 +104,54 @@ class DetailTableViewController: UITableViewController {
     }
     
     /* NAVIGATION */
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Update model and pass routine to destination controller
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "addRoutine") {
-            let routineTVC = segue.destinationViewController as! RoutineTableViewController
+            let routineTVC = segue.destination as! RoutineTableViewController
             routineTVC.routine = self.alarm.routine.copy()
         }
     }
     
     /* UNWIND SEGUES */
 
-    @IBAction func saveLocation (segue:UIStoryboardSegue) {
-        let locationVC = segue.sourceViewController as! LocationViewController
+    @IBAction func saveLocation(segue: UIStoryboardSegue) {
+        let locationVC = segue.source as! LocationViewController
         let location = locationVC.searchBar.text!
         if location != "" &&  locationVC.isValidDest {
             locationLabel.text = location
-            alarm.setETA(Int(round(locationVC.etaMinutes)))
-            alarm.setDestination(locationVC.destination!)
+            alarm.setETA(etaMinutes: Int(round(locationVC.etaMinutes)))
+            alarm.setDestination(mapItem: locationVC.destination!)
             switch (locationVC.transportationType.selectedSegmentIndex) {
                 case 0:
-                    alarm.setTransportation(.Automobile)
+                    alarm.setTransportation(transportation: .Automobile)
                     break
                 case 1:
-                    alarm.setTransportation(.Transit)
+                    alarm.setTransportation(transportation: .Transit)
                     break
                 default:
                     break
             }
-            updateTimeLabels(timePicker)
+            updateTimeLabels(sender: timePicker)
         }
     }
     
-    @IBAction func cancelLocation (segue:UIStoryboardSegue) {
+
+
+    @IBAction func cancelLocation(segue: UIStoryboardSegue) {
         // Do nothing!
     }
     
-    @IBAction func saveRoutine (segue:UIStoryboardSegue) {
-        let routineTVC = segue.sourceViewController as! RoutineTableViewController
-        self.alarm.setRoutine(routineTVC.routine)
-        updateTimeLabels(timePicker)
+    @IBAction func saveRoutine(segue: UIStoryboardSegue) {
+        let routineTVC = segue.source as! RoutineTableViewController
+        self.alarm.setRoutine(routine: routineTVC.routine)
+        updateTimeLabels(sender: timePicker)
         
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
         
     }
     
-    @IBAction func cancelRoutine (segue:UIStoryboardSegue) {
+    @IBAction func cancelRoutine(segue: UIStoryboardSegue) {
         // Do nothing!
     }
 }

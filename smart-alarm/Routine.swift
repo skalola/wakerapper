@@ -36,7 +36,7 @@ class Routine {
     }
     
     func removeActivity (index: Int) {
-        self.activities.removeAtIndex(index)
+        self.activities.remove(at: index)
     }
         
     func getTotalTime () -> Int {
@@ -54,15 +54,17 @@ class Routine {
         for activity in self.activities {
             array.append(activity.toDictionary())
         }
-        return array
+        return array as NSArray
     }
     
     func fromArray (array: NSArray) {
         for data in array {
-            let name = data.valueForKey("name") as! String
-            let time = data.valueForKey("time") as! Int
+            let name = (data as AnyObject).value(forKey: "name") as! String
+            let time = (data as AnyObject).value(forKey: "time") as! Int
+//            let name = (data as AnyObject).value("name") as String
+//            let time = (data as AnyObject).value("time") as Int
             let activity = Activity(name: name, time: time)
-            self.addActivity(activity)
+            self.addActivity(newActivity: activity)
         }
     }
 }

@@ -30,18 +30,19 @@ class LocationViewController: UIViewController, UISearchBarDelegate, CLLocationM
     
     
     // TODO: CHECK FOR VALID DESTINATION!!!
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = searchBar.text
         localSearch = MKLocalSearch(request: localSearchRequest)
-        localSearch.startWithCompletionHandler({
+        localSearch.start(completionHandler: {
             (localSearchResponse, error) -> Void in
             if localSearchResponse == nil {
                 searchBar.text = ""
-                let alertController = UIAlertController(title: nil, message: "Address not found", preferredStyle: .Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                let alertController = UIAlertController(title: nil, message: "Address not found", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
                 return
             }
             
@@ -59,25 +60,25 @@ class LocationViewController: UIViewController, UISearchBarDelegate, CLLocationM
             
             searchBar.text = localSearchResponse?.mapItems.first?.name
             let directionsRequest = MKDirectionsRequest()
-            directionsRequest.source = MKMapItem.mapItemForCurrentLocation()
+            directionsRequest.source = MKMapItem.forCurrentLocation()
             self.destination = localSearchResponse?.mapItems.first
             directionsRequest.destination = self.destination
             directionsRequest.requestsAlternateRoutes = false
             
             // Determine which transportation method to use in ETA
             if (self.transportationType.selectedSegmentIndex == 0) {
-                directionsRequest.transportType = .Automobile
+                directionsRequest.transportType = .automobile
             } else {
-                directionsRequest.transportType = .Transit
+                directionsRequest.transportType = .transit
             }
             
             let direction = MKDirections(request: directionsRequest)
-            direction.calculateETAWithCompletionHandler({
+            direction.calculateETA(completionHandler: {
                 (response, err) -> Void in
                 if response == nil {
-                    let alertController = UIAlertController(title: nil, message: "No routes found.", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: nil, message: "No routes found.", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
                     self.etaMinutes = 0.0
                     return
                 }
@@ -94,6 +95,6 @@ class LocationViewController: UIViewController, UISearchBarDelegate, CLLocationM
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
-        UIBarButtonItem.appearance().tintColor = UIColor.magentaColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.magenta
     }
 }

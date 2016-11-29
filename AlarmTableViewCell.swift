@@ -14,37 +14,37 @@ class AlarmTableViewCell: UITableViewCell {
     @IBOutlet weak var alarmDestination: UILabel!
     @IBOutlet weak var alarmToggle: UISwitch!
 
-    let nsDefaults = NSUserDefaults.standardUserDefaults()
-    
+    let nsDefaults = UserDefaults.standard
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        self.alarmToggle.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
-        self.alarmToggle.on = self.nsDefaults.boolForKey("stateChanged:")
-
+        self.alarmToggle.addTarget(self, action: #selector(switchPressed(_:)), for: UIControlEvents.valueChanged)
+                
+        self.alarmToggle.isOn = self.nsDefaults.bool(forKey: "stateChanged:")
+        
     }
     
-    @IBAction func switchPressed(sender: UISwitch) {
-        self.nsDefaults.setBool(self.alarmToggle.on, forKey: "stateChanged:")
+    @IBAction func switchPressed(_ sender: UISwitch) {
+        self.nsDefaults.set(self.alarmToggle.isOn, forKey: "stateChanged:")
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     func stateChanged(switchState: UISwitch) {
-        if switchState.on {
-            alarmTime.textColor = UIColor.whiteColor()
-            alarmDestination.textColor = UIColor.whiteColor()
+        if switchState.isOn {
+            alarmTime.textColor = UIColor.white
+            alarmDestination.textColor = UIColor.white
+            
         } else {
-            alarmTime.textColor = UIColor.lightGrayColor()
-            alarmDestination.textColor = UIColor.lightGrayColor()
+            alarmTime.textColor = UIColor.lightGray
+            alarmDestination.textColor = UIColor.lightGray
         }
     }
-    
     
 }

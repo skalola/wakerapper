@@ -11,38 +11,37 @@ import UIKit
 class HTTP: NSObject {
     
     /* HTTP POST REQUEST */
-    
-    func POST (url: String, requestJSON: NSData, postComplete: (success: Bool, msg: String) -> ()) {
+    func POST (url: String, requestJSON: NSData, postComplete: @escaping (_ success: Bool, _ msg: String) -> ()) {
         // Set up the request object
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = requestJSON
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        request.httpBody = requestJSON as Data
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         // Initialize session object
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> () in
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> () in
             
             if data == nil {
-                postComplete(success: false, msg: "ERROR")
+                postComplete(false, "ERROR")
                 print("Error data is nil")
                 return
             }
             
-            let parsed = self.fromJSON(data!)
+            let parsed = self.fromJSON(JSON: data! as NSData)
             if let responseData = parsed {
                 let success = responseData["status"] as! String
 
                 if (success == "Successfully uploaded!") {
-                    postComplete(success: true, msg: "SUCCESS")
+                    postComplete(true, "SUCCESS")
                     print("\(responseData)")
                 } else {
-                    postComplete(success: false, msg: "FAILURE")
+                    postComplete(false, "FAILURE")
                     print("\(responseData)")
                 }
             } else {
-                postComplete(success: false, msg: "ERROR")
+                postComplete(false, "ERROR")
                 print("Error in response!")
             }
         })
@@ -52,10 +51,10 @@ class HTTP: NSObject {
     /* JSON CONVERSION */
     
     func toJSON (dict: NSDictionary) -> NSData? {
-        if NSJSONSerialization.isValidJSONObject(dict) {
+        if JSONSerialization.isValidJSONObject(dict) {
             do {
-                let json = try NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions())
-                return json
+                let json = try JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions())
+                return json as NSData?
             } catch let error as NSError {
                 print("ERROR: Unable to serialize json, error: \(error)")
             }
@@ -65,7 +64,7 @@ class HTTP: NSObject {
     
     func fromJSON (JSON: NSData) -> NSDictionary? {
         do {
-            return try NSJSONSerialization.JSONObjectWithData(JSON, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
+            return try JSONSerialization.jsonObject(with: JSON as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
         } catch {
             return nil
         }

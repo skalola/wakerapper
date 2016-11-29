@@ -65,9 +65,9 @@ class Destination {
     }
     
     func fromDictionary (dict: NSDictionary) {
-        self.name = dict.valueForKey("name") as! String
-        self.lat = dict.valueForKey("lat") as! Double
-        self.long = dict.valueForKey("long") as! Double
+        self.name = dict.value(forKey: "name") as! String
+        self.lat = dict.value(forKey: "lat") as! Double
+        self.long = dict.value(forKey: "long") as! Double
     }
 
 

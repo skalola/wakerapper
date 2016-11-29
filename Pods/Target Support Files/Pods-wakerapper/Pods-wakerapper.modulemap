@@ -1,0 +1,6 @@
+framework module Pods_wakerapper {
+  umbrella header "Pods-wakerapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
